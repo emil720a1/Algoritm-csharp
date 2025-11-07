@@ -35,6 +35,14 @@ class Program
 {
     static void Main(string[] args)
     {
-        
+
+        int a = 252; int b = 105;
+
+    var result = Algortihm.GCD_Iteration(a, b);
+    Console.WriteLine($"result with Iteration {result}");
+    
+    var resultRecursion = Algortihm.GCD_Recursion(a, b);
+    Console.WriteLine($"result with Recursion {resultRecursion}");
+
     }
 }
