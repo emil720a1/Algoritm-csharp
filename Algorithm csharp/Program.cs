@@ -14,6 +14,26 @@ class Node
         this.value = value;
     }
 
+    
+    
+    public Node GetMin(Node node)
+    {
+        if (node == null) return null;
+        
+        if (node.left == null) return node;
+
+        return GetMin(node.left);
+    }
+
+    public Node GetMax(Node node)
+    {
+        if (node == null) return null;
+        
+        if (node.right == null) return node;
+
+        return GetMax(node.right);
+    }
+    
     public void UpdateHeight(Node node)
     {
         node.height = Math.Max(GetHeight(node.left), GetHeight(node.right) + 1);
